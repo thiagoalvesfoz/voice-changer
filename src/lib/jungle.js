@@ -96,7 +96,7 @@ var fadeTime = 0.05;
 var bufferTime = 0.1;
 
 export class Jungle {
-  previousPitch = -1;
+  #previousPitch = -1;
 
   constructor(context) {
     this.context = context;
@@ -222,6 +222,10 @@ export class Jungle {
     }
 
     this.setDelay(delayTime * Math.abs(mult));
-    previousPitch = mult;
+    this.#previousPitch = mult;
+  }
+
+  getPreviousPitch() {
+    return this.#previousPitch;
   }
 }
