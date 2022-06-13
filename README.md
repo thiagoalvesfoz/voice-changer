@@ -21,7 +21,7 @@ async function application() {
 
   const audioBuffer = await applyEffects(blobAudio);
 
-  // some AudioBuffer to blob conversion code here
+  // some AudioBuffer-Blob converter here
   const blob = audioBufferToBlobAudio(audioBuffer); // omitted code
 }
 ```
